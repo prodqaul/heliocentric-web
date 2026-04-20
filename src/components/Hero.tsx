@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 
 interface HeroProps {
@@ -6,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ scrollToSection }: HeroProps) {
   return (
-    <section id="home" className="pt-16 min-h-screen relative flex items-center">
+    <section id="home" className="relative flex min-h-screen items-center pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,9 +22,9 @@ export default function Hero({ scrollToSection }: HeroProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-12 text-center text-white sm:px-6 md:py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-4xl">
+          <h1 className="mb-5 text-3xl font-bold leading-tight sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             <div className="headline-motion-wrapper">
               <span className="headline-line headline-heal">Heal the Land,</span>
               <span className="headline-line headline-feed">Feed the People</span>
@@ -38,7 +39,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           <style jsx>{`
             .headline-motion-wrapper {
               position: relative;
-              height: 2.5em;
+              height: 2.65em;
               margin-bottom: 0.15em;
             }
 
@@ -108,6 +109,12 @@ export default function Hero({ scrollToSection }: HeroProps) {
               }
             }
 
+            @media (max-width: 1024px) {
+              .headline-motion-wrapper {
+                height: 2.75em;
+              }
+            }
+
             @media (max-width: 768px) {
               .headline-motion-wrapper {
                 height: 2.9em;
@@ -159,21 +166,73 @@ export default function Hero({ scrollToSection }: HeroProps) {
                 }
               }
             }
+
+            @media (max-width: 480px) {
+              .headline-motion-wrapper {
+                height: 3em;
+              }
+
+              @keyframes healMotion {
+                0% {
+                  opacity: 0;
+                  transform: translateX(-50%) translateY(16px);
+                }
+                15% {
+                  opacity: 1;
+                  transform: translateX(-50%) translateY(0);
+                }
+                45% {
+                  opacity: 1;
+                  transform: translateX(-50%) translateY(0);
+                }
+                65% {
+                  opacity: 1;
+                  transform: translateX(calc(-100% - 12vw)) translateY(0);
+                }
+                100% {
+                  opacity: 1;
+                  transform: translateX(calc(-100% - 0.18em)) translateY(1.25em);
+                }
+              }
+
+              @keyframes feedMotion {
+                0% {
+                  opacity: 0;
+                  transform: translateX(-50%) translateY(1.25em);
+                }
+                15% {
+                  opacity: 1;
+                  transform: translateX(-50%) translateY(1.25em);
+                }
+                45% {
+                  opacity: 1;
+                  transform: translateX(-50%) translateY(1.25em);
+                }
+                65% {
+                  opacity: 1;
+                  transform: translateX(12vw) translateY(1.25em);
+                }
+                100% {
+                  opacity: 1;
+                  transform: translateX(0.18em) translateY(1.25em);
+                }
+              }
+            }
           `}</style>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed animate-fadeInUp">
+          <p className="mb-8 text-base leading-relaxed text-gray-200 animate-fadeInUp sm:text-lg md:text-xl lg:text-2xl">
             Heliocentric System is an AI-driven company building intelligent solutions 
             for sustainable agriculture and environmental protection.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
+          <div className="flex flex-col justify-center gap-3 animate-fadeInUp sm:flex-row sm:gap-4">
             <button
               onClick={() => scrollToSection('what-we-do')}
-              className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="rounded-lg bg-green-600 px-6 py-3 text-base font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-green-700 hover:shadow-xl sm:px-8 sm:py-4 sm:text-lg"
             >
               Discover Climavise
             </button>
             <button
               onClick={() => scrollToSection('support')}
-              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-medium border-2 border-white/30 hover:bg-white hover:text-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="rounded-lg border-2 border-white/30 bg-white/10 px-6 py-3 text-base font-medium text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-gray-900 hover:shadow-xl sm:px-8 sm:py-4 sm:text-lg"
             >
               Support Our Mission
             </button>

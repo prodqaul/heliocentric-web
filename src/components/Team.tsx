@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import Image from 'next/image';
 
 export default function Team() {
@@ -6,7 +8,7 @@ export default function Team() {
       name: 'Moise Iradukunda',
       role: 'CEO & Co-Founder',
       description: 'Drives strategy, partnerships, and execution with a background in data science and business development.',
-      image: '/WhatsApp%20Image%202026-03-27%20at%2021.54.51.jpeg'
+      image: '/moise.jpeg'
     },
     {
       name: 'Aphrodis Uwineza',
@@ -18,7 +20,7 @@ export default function Team() {
       name: 'Clepine Icyitegetse',
       role: 'Agricultural Specialist, Horticulture',
       description: 'Ensures every diagnostic and recommendation is grounded in real agronomic expertise and on-farm practicality.',
-      image: '/WhatsApp%20Image%202026-03-30%20at%2011.15.49.jpeg'
+      image: '/clepine.jpeg'
     }
   ];
 
