@@ -1,11 +1,11 @@
 export default function WhatWeDo() {
   return (
     <section id="what-we-do" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
+      <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
+        <div className=" mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">What We Do</h2>
           <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             We build AI-powered platforms that solve two of the world's most urgent challenges: 
             food insecurity and environmental degradation. Our solutions are designed to be accessible, 
             affordable, and impactful for every farmer, regardless of location or device.

@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function Support() {
   return (
     <section id="support" className="py-20 bg-green-600 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 ">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
           Help Us Put Better Tools in the Hands of Farmers Who Need Them Most
         </h2>
         <div className="w-24 h-1 bg-white mx-auto mb-8"></div>

@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ scrollToSection }: HeroProps) {
   return (
-    <section id="home" className="relative flex min-h-screen items-center pt-16">
+    <section id="home" className="relative flex lg:min-h-screen items-center pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -24,7 +24,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-12 text-center text-white sm:px-6 md:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-4xl">
-          <h1 className="mb-5 text-3xl font-bold leading-tight sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="mb-5 text-2xl font-bold leading-tight sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             <div className="headline-motion-wrapper">
               <span className="headline-line headline-heal">Heal the Land,</span>
               <span className="headline-line headline-feed">Feed the People</span>

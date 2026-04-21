@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface NavigationProps {
   activeSection: string;
@@ -22,11 +23,18 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
   ];
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-sm">
+    <nav className="fixed top-0 z-50 w-full bg-transparent backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="shrink-0">
-            <h1 className="text-base font-bold text-green-700 sm:text-lg md:text-xl">Heliocentric System</h1>
+            <Image
+              src="/climavise_logo.png"
+              alt="Climavise logo"
+              width={140}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
           </div>
           <button
             type="button"
@@ -82,7 +90,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -28, opacity: 0 }}
               transition={{ duration: 0.24, ease: 'easeOut' }}
-              className="border-t border-gray-200 py-3 md:hidden"
+              className="border-t border-gray-200 py-3 px-4 h-screen md:hidden bg-white/95 backdrop-blur-sm"
             >
               <div className="grid grid-cols-1 gap-2">
                 {navigationItems.map((item) => (
