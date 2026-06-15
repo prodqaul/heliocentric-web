@@ -9,22 +9,35 @@ export default function SupportOurTeamPage() {
   const [selectedAmounts, setSelectedAmounts] = useState<number[]>([]);
   const [customAmount, setCustomAmount] = useState('');
   const [isAmountConfirmed, setIsAmountConfirmed] = useState(false);
-  const [showPaymentMethodPicker, setShowPaymentMethodPicker] = useState(false);
-  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<'bank' | 'momo' | 'paypal' | null>(null);
+  const [isPaymentMethodModalOpen, setIsPaymentMethodModalOpen] = useState(false);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<'bank' | 'momo' | null>(null);
 
   const presetAmounts = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000];
+  const USD_TO_RWF_RATE = 1500;
   const parsedCustomAmount = Number(customAmount);
   const hasValidCustomAmount = customAmount.trim() !== '' && !Number.isNaN(parsedCustomAmount) && parsedCustomAmount > 0;
   const canConfirmAmount = selectedAmounts.length > 0 || hasValidCustomAmount;
   const presetTotal = selectedAmounts.reduce((sum, amount) => sum + amount, 0);
   const selectedTotal = presetTotal + (hasValidCustomAmount ? parsedCustomAmount : 0);
+  const selectedTotalRwf = selectedTotal * USD_TO_RWF_RATE;
+  const formatRwf = (amount: number) => `${amount.toLocaleString()} RWF`;
 
   const openContributionModal = () => {
     setIsContributionModalOpen(true);
     setSelectedAmounts([]);
     setCustomAmount('');
     setIsAmountConfirmed(false);
-    setShowPaymentMethodPicker(false);
+    setIsPaymentMethodModalOpen(false);
+    setSelectedPaymentMethod(null);
+  };
+
+  const openPaymentMethodModal = () => {
+    setIsPaymentMethodModalOpen(true);
+    setSelectedPaymentMethod(null);
+  };
+
+  const closePaymentMethodModal = () => {
+    setIsPaymentMethodModalOpen(false);
     setSelectedPaymentMethod(null);
   };
 
@@ -33,7 +46,7 @@ export default function SupportOurTeamPage() {
     setSelectedAmounts([]);
     setCustomAmount('');
     setIsAmountConfirmed(false);
-    setShowPaymentMethodPicker(false);
+    setIsPaymentMethodModalOpen(false);
     setSelectedPaymentMethod(null);
   };
 
@@ -190,7 +203,6 @@ export default function SupportOurTeamPage() {
                   type="button"
                   onClick={() => {
                     setIsAmountConfirmed(true);
-                    setShowPaymentMethodPicker(false);
                     setSelectedPaymentMethod(null);
                   }}
                   disabled={!canConfirmAmount}
@@ -207,102 +219,134 @@ export default function SupportOurTeamPage() {
             {isAmountConfirmed && (
               <div className="mt-6">
                 <h3 className="text-base font-bold text-gray-900 sm:text-lg">2) Choose payment method and proceed</h3>
+                <p className="mt-2 text-sm text-gray-600">
+                  Confirmed amount: <span className="font-bold text-green-700">${selectedTotal}</span>
+                </p>
                 <button
                   type="button"
-                  onClick={() => setShowPaymentMethodPicker(true)}
+                  onClick={openPaymentMethodModal}
                   className="mt-4 inline-flex rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
                 >
                   Choose Payment Method
                 </button>
-
-                {showPaymentMethodPicker && (
-                  <div className="mt-4 grid grid-cols-1 gap-2 sm:flex sm:flex-wrap sm:gap-3">
-                    <button
-                      type="button"
-                      onClick={() => setSelectedPaymentMethod('bank')}
-                      className={`rounded-lg border px-4 py-2 text-sm font-semibold transition-colors ${
-                        selectedPaymentMethod === 'bank'
-                          ? 'border-green-700 bg-green-700 text-white'
-                          : 'border-gray-300 bg-white text-gray-700 hover:border-green-500 hover:text-green-700'
-                      }`}
-                    >
-                      Bank Account
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedPaymentMethod('momo')}
-                      className={`rounded-lg border px-4 py-2 text-sm font-semibold transition-colors ${
-                        selectedPaymentMethod === 'momo'
-                          ? 'border-blue-700 bg-blue-700 text-white'
-                          : 'border-gray-300 bg-white text-gray-700 hover:border-blue-500 hover:text-blue-700'
-                      }`}
-                    >
-                      MoMo
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedPaymentMethod('paypal')}
-                      className={`rounded-lg border px-4 py-2 text-sm font-semibold transition-colors ${
-                        selectedPaymentMethod === 'paypal'
-                          ? 'border-amber-600 bg-amber-600 text-white'
-                          : 'border-gray-300 bg-white text-gray-700 hover:border-amber-500 hover:text-amber-700'
-                      }`}
-                    >
-                      PayPal
-                    </button>
-                  </div>
-                )}
-
-                {selectedPaymentMethod === 'bank' && (
-                  <article className="mt-4 rounded-xl border border-green-100 bg-green-50 p-4">
-                    <h4 className="text-base font-bold text-gray-900 sm:text-lg">Bank Account</h4>
-                    <p className="mt-2 text-sm text-gray-700">Account Name: Heliocentric System Group</p>
-                    <p className="mt-1 text-sm text-gray-700">Bank: [Your Bank Name]</p>
-                    <p className="mt-1 text-sm text-gray-700">Account Number: [Your Account Number]</p>
-                    <button
-                      type="button"
-                      className="mt-4 w-full rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-800"
-                    >
-                      Proceed with Bank Account
-                    </button>
-                  </article>
-                )}
-
-                {selectedPaymentMethod === 'momo' && (
-                  <article className="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
-                    <h4 className="text-base font-bold text-gray-900 sm:text-lg">MoMo</h4>
-                    <p className="mt-2 text-sm text-gray-700">Name: Heliocentric System Group</p>
-                    <p className="mt-1 text-sm text-gray-700">Number: [Your MoMo Number]</p>
-                    <p className="mt-1 text-sm text-gray-700">Network: MTN / Airtel</p>
-                    <button
-                      type="button"
-                      className="mt-4 w-full rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-800"
-                    >
-                      Proceed with MoMo
-                    </button>
-                  </article>
-                )}
-
-                {selectedPaymentMethod === 'paypal' && (
-                  <article className="mt-4 rounded-xl border border-amber-100 bg-amber-50 p-4">
-                    <h4 className="text-base font-bold text-gray-900 sm:text-lg">PayPal</h4>
-                    <p className="mt-2 text-sm text-gray-700">PayPal Email: [your-paypal@email.com]</p>
-                    <p className="mt-1 text-sm text-gray-700">Reference: Support Our Team</p>
-                    <p className="mt-1 text-sm text-gray-700">Currency: USD / EUR</p>
-                    <button
-                      type="button"
-                      className="mt-4 w-full rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-amber-700"
-                    >
-                      Proceed with PayPal
-                    </button>
-                  </article>
-                )}
 
                 <p className="mt-6 text-sm text-gray-500">
                   After contributing, please send your confirmation to our contact section so we can acknowledge your support.
                 </p>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {isPaymentMethodModalOpen && (
+        <div className="fixed inset-0 z-60 overflow-y-auto bg-black/60 px-3 py-4 sm:px-4 sm:py-8">
+          <div className="mx-auto w-full max-w-lg rounded-2xl bg-white p-4 shadow-2xl sm:p-6">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl">Choose Payment Method</h2>
+                <p className="mt-2 text-sm text-gray-600">
+                  {selectedPaymentMethod === 'momo' ? (
+                    <>
+                      Amount: <span className="font-bold text-green-700">{formatRwf(selectedTotalRwf)}</span>
+                      <span className="text-gray-500"> (${selectedTotal} USD)</span>
+                    </>
+                  ) : (
+                    <>
+                      Amount: <span className="font-bold text-green-700">${selectedTotal}</span>
+                      <span className="text-gray-500"> ({formatRwf(selectedTotalRwf)})</span>
+                    </>
+                  )}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={closePaymentMethodModal}
+                className="rounded-lg border border-gray-200 px-3 py-1 text-sm font-semibold text-gray-600 hover:bg-gray-50"
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
+              <button
+                type="button"
+                onClick={() => setSelectedPaymentMethod('bank')}
+                className={`rounded-lg border px-4 py-2.5 text-sm font-semibold transition-colors ${
+                  selectedPaymentMethod === 'bank'
+                    ? 'border-green-700 bg-green-700 text-white'
+                    : 'border-gray-300 bg-white text-gray-700 hover:border-green-500 hover:text-green-700'
+                }`}
+              >
+                Bank Account
+              </button>
+              <button
+                type="button"
+                onClick={() => setSelectedPaymentMethod('momo')}
+                className={`rounded-lg border px-4 py-2.5 text-sm font-semibold transition-colors ${
+                  selectedPaymentMethod === 'momo'
+                    ? 'border-blue-700 bg-blue-700 text-white'
+                    : 'border-gray-300 bg-white text-gray-700 hover:border-blue-500 hover:text-blue-700'
+                }`}
+              >
+                MoMo
+              </button>
+              <button
+                type="button"
+                disabled
+                className="cursor-not-allowed rounded-lg border border-gray-200 bg-gray-100 px-4 py-2.5 text-sm font-semibold text-gray-400"
+                title="PayPal is coming soon"
+              >
+                PayPal
+                <span className="mt-0.5 block text-[10px] font-medium uppercase tracking-wide">Coming soon</span>
+              </button>
+            </div>
+
+            {selectedPaymentMethod === 'bank' && (
+              <article className="mt-5 rounded-xl border border-green-100 bg-green-50 p-4">
+                <h3 className="text-base font-bold text-gray-900 sm:text-lg">Bank Account Details</h3>
+                <p className="mt-3 text-sm text-gray-700">Account Name: Moise IRADUKUNDA</p>
+                <p className="mt-1 text-sm text-gray-700">Account Number: 4002112551167</p>
+                <p className="mt-4 text-sm font-semibold text-gray-800">How to pay:</p>
+                <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm text-gray-700">
+                  <li>
+                    Transfer{' '}
+                    <span className="font-semibold">
+                      ${selectedTotal} ({formatRwf(selectedTotalRwf)})
+                    </span>{' '}
+                    to the account above.
+                  </li>
+                  <li>Use reference: <span className="font-semibold">Support Our Team</span>.</li>
+                  <li>Send your payment confirmation to our contact section.</li>
+                </ol>
+              </article>
+            )}
+
+            {selectedPaymentMethod === 'momo' && (
+              <article className="mt-5 rounded-xl border border-blue-100 bg-blue-50 p-4">
+                <h3 className="text-base font-bold text-gray-900 sm:text-lg">Mobile Money (MoMo)</h3>
+                <p className="mt-3 text-sm text-gray-700">Name: Moise IRADUKUNDA</p>
+                <p className="mt-1 text-sm text-gray-700">Number: 0791643311</p>
+                <p className="mt-1 text-sm text-gray-700">Network: MTN Mobile Money</p>
+                <p className="mt-4 text-sm font-semibold text-gray-800">Quick USSD:</p>
+                <p className="mt-2 rounded-lg bg-white px-3 py-2 font-mono text-sm font-semibold text-blue-800">
+                  *182*1*1*0791643311*{selectedTotalRwf}#
+                </p>
+                <p className="mt-4 text-sm font-semibold text-gray-800">Or follow these steps:</p>
+                <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm text-gray-700">
+                  <li>Dial <span className="font-mono font-semibold">*182#</span> on your phone.</li>
+                  <li>Select <span className="font-semibold">1</span> (Send Money).</li>
+                  <li>Select <span className="font-semibold">1</span> (To MTN Number).</li>
+                  <li>Enter number: <span className="font-semibold">0791643311</span>.</li>
+                  <li>Enter amount: <span className="font-semibold">{formatRwf(selectedTotalRwf)}</span>.</li>
+                  <li>Confirm with your MoMo PIN.</li>
+                </ol>
+              </article>
+            )}
+
+            <p className="mt-5 text-sm text-gray-500">
+              After contributing, please send your confirmation to our contact section so we can acknowledge your support.
+            </p>
           </div>
         </div>
       )}
