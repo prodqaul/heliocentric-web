@@ -6,7 +6,6 @@ import {
   Hero, 
   About, 
   WhatWeDo, 
-  Services, 
   Team, 
   Support, 
   Contact, 
@@ -18,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'what-we-do', 'services', 'team', 'support', 'contact'];
+      const sections = ['home', 'about', 'what-we-do', 'team', 'support', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -47,7 +46,6 @@ export default function Home() {
       <Hero scrollToSection={scrollToSection} />
       <About />
       <WhatWeDo />
-      <Services />
       <Team />
       <Support />
       <Contact />

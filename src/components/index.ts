@@ -2,7 +2,6 @@ export { default as Navigation } from './Navigation';
 export { default as Hero } from './Hero';
 export { default as About } from './About';
 export { default as WhatWeDo } from './WhatWeDo';
-export { default as Services } from './Services';
 export { default as Team } from './Team';
 export { default as Support } from './Support';
 export { default as Contact } from './Contact';

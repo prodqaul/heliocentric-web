@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Image from 'next/image';
 
@@ -21,6 +21,12 @@ export default function Team() {
       role: 'Agricultural Specialist, Horticulture',
       description: 'Ensures every diagnostic and recommendation is grounded in real agronomic expertise and on-farm practicality.',
       image: '/clepine.jpeg'
+    },
+    {
+      name: 'Munaziri Josue',
+      role: 'AI & Data Science Engineer',
+      description: 'Leads model development and space data integration, specialized in machine learning, and serves in geospatial data processing and analysis.',
+      image: '/munaziriJOSUE.jpeg'
     }
   ];
 
@@ -32,7 +38,7 @@ export default function Team() {
           <div className="w-24 h-1 bg-green-600 mx-auto"></div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative mx-auto mb-5 h-28 w-28 overflow-hidden rounded-full ring-4 ring-green-100">

@@ -16,7 +16,6 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
     { id: 'what-we-do', label: 'What We Do' },
-    { id: 'services', label: 'Services' },
     { id: 'team', label: 'Team' },
     { id: 'support', label: 'Support' },
     { id: 'contact', label: 'Contact' },

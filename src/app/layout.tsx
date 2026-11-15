@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Heliocentric System Group | Heal the Land. Feed the People. Protect the Future.",
-  description: "AI-driven company building intelligent solutions for sustainable agriculture and environmental protection. Discover Climavise - precision agriculture and forest protection platforms.",
-  keywords: "AI agriculture, sustainable farming, forest protection, crop disease detection, deforestation monitoring, precision agriculture, environmental sustainability, Rwanda, Africa",
-  authors: [{ name: "Heliocentric System Group" }],
+  title: "EZA CLIMAVISE | DETECT. PROTECT. RESTORE. HARVEST.",
+  description: "Nonprofit environmental innovation initiative integrating satellite radar, artificial intelligence, IoT sensors, and drone verification to protect forests, wetlands, and vital ecosystems.",
+  keywords: "EZA CLIMAVISE, forest protection, deforestation detection, satellite radar, environmental surveillance, conservation, Rwanda, Africa, GLOC 2026",
+  authors: [{ name: "EZA CLIMAVISE" }],
 };
 
 export const viewport = {
