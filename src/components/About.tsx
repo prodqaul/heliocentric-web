@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <span className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-green-800 mb-3">
+            Our Purpose &amp; Heritage
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Us</h2>
           <div className="w-24 h-1 bg-green-600 mx-auto"></div>
         </div>
@@ -13,27 +16,41 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Who We Are</h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Heliocentric System Group is a purpose-driven deep-tech company at the intersection of precision agriculture 
-              and environmental sustainability. Through our flagship platform, Climavise, we deploy AI-powered tools that 
-              empower farmers to protect their harvests and help communities safeguard their forests, turning data into action, 
-              and action into impact.
+              Heliocentric System Group is a purpose-driven deep-tech company at the intersection of
+              precision agriculture and environmental sustainability. Through our platforms, we turn
+              data into action—and action into lasting impact.
+            </p>
+            <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+              <strong>Climavise</strong> delivers environmental intelligence: satellite radar, AI,
+              IoT sensors, and drone verification that help communities and conservation authorities
+              protect forests, wetlands, rivers, lakes, and marine ecosystems.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              <strong>Eza Climavise</strong> delivers agriculture intelligence: AI-powered crop
+              diagnostics, agro-input support, and drone field mapping that empower farmers to
+              protect their harvests—accessible via smartphone, the SAROK handheld device, and
+              Drone-as-a-Service.
             </p>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
             <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-              Moise Iradukunda, our founder, grew up in a rural village in Rwanda where farming was the only livelihood. 
-              Season after season, his family watched their crops destroyed by undetected pests and diseases, with no tools, 
-              no guidance, and no support. The result was hunger, financial hardship, and broken dreams.
+              Moise Iradukunda, our founder, grew up in a rural village in Rwanda where farming was
+              the only livelihood. Season after season, his family watched their crops destroyed by
+              undetected pests and diseases, with no tools, no guidance, and no support. The result
+              was hunger, financial hardship, and broken dreams.
             </p>
             <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-              In May 2018, a devastating landslide struck his hometown in Western Rwanda, claiming 18 lives and displacing 
-              hundreds of families. The disaster, worsened by environmental degradation and unsustainable land use, became a 
-              turning point. Still a secondary school student, Moise committed himself to building a solution.
+              In May 2018, a devastating landslide struck his hometown in Western Rwanda, claiming
+              18 lives and displacing hundreds of families. The disaster, worsened by severe
+              deforestation and unsustainable land use, became a defining turning point.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              That idea grew into Climavise, incubated at the African Centre of Excellence in Data Science, University of Rwanda. 
-              Today, Heliocentric System Group turns that vision into reality.
+              Still a secondary school student, Moise committed himself to building solutions.
+              Incubated at the African Centre of Excellence in Data Science, University of Rwanda,
+              that vision grew into Climavise for environmental protection and Eza Climavise for
+              precision agriculture—recognized by the International Astronautical Federation and
+              selected for presentation at GLOC 2026.
             </p>
           </div>
         </div>
@@ -58,7 +75,9 @@ export default function About() {
               </p>
               <h4 className="mt-4 text-2xl font-extrabold text-gray-900">Future We See</h4>
               <p className="mt-3 text-gray-700 leading-relaxed">
-                A future where every farmer has access to intelligent tools, and every forest is protected.
+                A future where every farmer has access to intelligent tools, every forest is
+                protected, ecosystems flourish, and environmental threats are addressed before
+                lasting damage occurs.
               </p>
               <div className="mt-5 h-1 w-16 rounded-full bg-sky-600 transition-all duration-300 group-hover:w-24"></div>
             </article>
@@ -69,7 +88,9 @@ export default function About() {
               </p>
               <h4 className="mt-4 text-2xl font-extrabold text-gray-900">How We Deliver</h4>
               <p className="mt-3 text-gray-700 leading-relaxed">
-                To deliver accessible, AI-powered solutions that enable sustainable agriculture and environmental protection.
+                To deliver accessible AI-powered solutions for sustainable agriculture and to
+                safeguard vital ecosystems by connecting satellite, sensor, and drone intelligence
+                with verified on-the-ground action.
               </p>
               <div className="mt-5 h-1 w-16 rounded-full bg-amber-600 transition-all duration-300 group-hover:w-24"></div>
             </article>

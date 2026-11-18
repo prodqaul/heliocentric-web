@@ -6,7 +6,7 @@ import {
   Hero, 
   About, 
   WhatWeDo, 
-  Services, 
+  Services,
   Team, 
   Support, 
   Contact, 
