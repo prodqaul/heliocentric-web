@@ -16,31 +16,41 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Who We Are</h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              <strong>EZA CLIMAVISE</strong> (Environmental Zone Analytics &amp; Climate Vision and Integrated Surveillance Engine) 
-              is a purpose-driven environmental innovation initiative deploying advanced technology to protect forests, wetlands, 
-              rivers, lakes, and marine ecosystems from illegal degradation.
+              Heliocentric System Group is a purpose-driven deep-tech company at the intersection of
+              precision agriculture and environmental sustainability. Through our platforms, we turn
+              data into action—and action into lasting impact.
+            </p>
+            <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+              <strong>Climavise</strong> delivers environmental intelligence: satellite radar, AI,
+              IoT sensors, and drone verification that help communities and conservation authorities
+              protect forests, wetlands, rivers, lakes, and marine ecosystems.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We bridge the critical gap between environmental intelligence and enforcement by integrating satellite radar, 
-              artificial intelligence, IoT acoustic sensors, and drone verification into a unified decision-support workflow—turning 
-              data into action, and action into lasting conservation impact.
+              <strong>Eza Climavise</strong> delivers agriculture intelligence: AI-powered crop
+              diagnostics, agro-input support, and drone field mapping that empower farmers to
+              protect their harvests—accessible via smartphone, the SAROK handheld device, and
+              Drone-as-a-Service.
             </p>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
             <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-              In May 2018, a devastating landslide struck the hometown of our founder, Moise Iradukunda, in Western Rwanda, 
-              claiming 18 lives and displacing hundreds of families. The disaster, worsened by severe deforestation and unsustainable 
-              land use, became a defining turning point.
+              Moise Iradukunda, our founder, grew up in a rural village in Rwanda where farming was
+              the only livelihood. Season after season, his family watched their crops destroyed by
+              undetected pests and diseases, with no tools, no guidance, and no support. The result
+              was hunger, financial hardship, and broken dreams.
             </p>
             <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-              Witnessing how environmental degradation directly threatens human lives and biodiversity, Moise committed himself to 
-              building an automated early-warning solution. Incubated at the African Centre of Excellence in Data Science, University of Rwanda, 
-              that vision evolved into EZA CLIMAVISE.
+              In May 2018, a devastating landslide struck his hometown in Western Rwanda, claiming
+              18 lives and displacing hundreds of families. The disaster, worsened by severe
+              deforestation and unsustainable land use, became a defining turning point.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Today, recognized by the International Astronautical Federation and selected for presentation at GLOC 2026, 
-              EZA CLIMAVISE empowers conservation authorities across Africa to safeguard nature before it is lost.
+              Still a secondary school student, Moise committed himself to building solutions.
+              Incubated at the African Centre of Excellence in Data Science, University of Rwanda,
+              that vision grew into Climavise for environmental protection and Eza Climavise for
+              precision agriculture—recognized by the International Astronautical Federation and
+              selected for presentation at GLOC 2026.
             </p>
           </div>
         </div>
@@ -52,10 +62,10 @@ export default function About() {
                 Motto
               </p>
               <h4 className="mt-4 text-2xl font-extrabold text-gray-900 leading-tight">
-                DETECT.
+                Heal the Land.
               </h4>
-              <p className="mt-1 text-lg font-semibold text-green-700">PROTECT.</p>
-              <p className="text-lg font-semibold text-emerald-700">RESTORE. HARVEST.</p>
+              <p className="mt-1 text-lg font-semibold text-green-700">Feed the People.</p>
+              <p className="text-lg font-semibold text-emerald-700">Protect the Future.</p>
               <div className="mt-5 h-1 w-16 rounded-full bg-green-600 transition-all duration-300 group-hover:w-24"></div>
             </article>
 
@@ -65,7 +75,9 @@ export default function About() {
               </p>
               <h4 className="mt-4 text-2xl font-extrabold text-gray-900">Future We See</h4>
               <p className="mt-3 text-gray-700 leading-relaxed">
-                A world where people and nature live in harmony, ecosystems flourish, environmental threats are addressed before lasting damage occurs, and every conservation effort contributes to a healthier planet.
+                A future where every farmer has access to intelligent tools, every forest is
+                protected, ecosystems flourish, and environmental threats are addressed before
+                lasting damage occurs.
               </p>
               <div className="mt-5 h-1 w-16 rounded-full bg-sky-600 transition-all duration-300 group-hover:w-24"></div>
             </article>
@@ -76,7 +88,9 @@ export default function About() {
               </p>
               <h4 className="mt-4 text-2xl font-extrabold text-gray-900">How We Deliver</h4>
               <p className="mt-3 text-gray-700 leading-relaxed">
-                To safeguard vital ecosystems from illegal degradation and habitat destruction by connecting real-time satellite, sensor, and drone intelligence with verified, on-the-ground conservation enforcement.
+                To deliver accessible AI-powered solutions for sustainable agriculture and to
+                safeguard vital ecosystems by connecting satellite, sensor, and drone intelligence
+                with verified on-the-ground action.
               </p>
               <div className="mt-5 h-1 w-16 rounded-full bg-amber-600 transition-all duration-300 group-hover:w-24"></div>
             </article>

@@ -4,54 +4,73 @@ import Image from 'next/image';
 export default function Services() {
   const services = [
     {
+      title: 'AI Crop Disease & Nutrient Diagnostics',
+      badge: 'Eza Climavise',
+      description: 'Instant, accurate, and offline-capable crop disease, pest, and nutrient deficiency detection.',
+      image: '/agriculture.jpeg'
+    },
+    {
+      title: 'Agro-Input Ordering & Delivery',
+      badge: 'Eza Climavise',
+      description: 'From diagnosis to treatment, end-to-end agro-input ordering and delivery for farmers.',
+      image: '/home.png'
+    },
+    {
+      title: 'Drone-as-a-Service',
+      badge: 'Eza Climavise',
+      description: 'Field health mapping for large farms and cooperatives with actionable crop insights.',
+      image: '/agriculture.jpeg'
+    },
+    {
       title: '24/7 Satellite & Radar Surveillance',
-      badge: 'All-Weather Coverage',
+      badge: 'Climavise',
       description: 'Continuous optical and SAR radar monitoring through clouds and darkness to detect illegal logging and land clearing.',
       image: '/service-satellite-radar.jpg'
     },
     {
       title: 'Drone Aerial Verification',
-      badge: 'Rapid Visual Confirmation',
+      badge: 'Climavise',
       description: 'Autonomous 4K UAV dispatch to satellite-flagged coordinates to verify incidents, slash false positives, and gather evidence.',
       image: '/service-drone-inspection.jpg'
     },
     {
       title: 'IoT Acoustic & Ground Sensors',
-      badge: 'Persistent Forest Mesh',
+      badge: 'Climavise',
       description: 'Ground and aquatic sensors detecting real-time sounds of chainsaws, gunshots, vehicles, and seismic vibrations in remote areas.',
       image: '/service-iot-sensor.jpg'
     },
     {
       title: 'Wildlife & Habitat Protection',
-      badge: 'Escape & Poaching Alerts',
+      badge: 'Climavise',
       description: 'Baseline movement mapping and boundary breach detection to protect vulnerable species and mitigate human-wildlife conflict.',
       image: '/service-wildlife-tracking.jpg'
     },
     {
-      title: 'Wetland, River & Marine Monitoring',
-      badge: 'Aquatic Ecosystems',
-      description: 'Comprehensive ecological surveillance across rivers, lakes, wetlands, and marine coastal ecosystems within a single platform.',
-      image: '/service-wetland-marine.jpg'
+      title: 'Institutional Dashboards',
+      badge: 'Both Platforms',
+      description: 'Data-driven insights and geospatial command interfaces for governments, development partners, and conservation authorities.',
+      image: '/Futuristic%20Forest%20Surveillance%20Dashboard.webp'
     },
     {
-      title: 'Decision Support & Ranger Dashboards',
-      badge: 'Operational Command Interface',
-      description: 'Geospatial web command platform delivering geolocated coordinates, risk heatmaps, and incident workflows for field authorities.',
-      image: '/Futuristic%20Forest%20Surveillance%20Dashboard.webp'
-    }
+      title: 'Field Support & Extension Services',
+      badge: 'Eza Climavise',
+      description: 'Human support when technology needs a human touch—extension services for farmers adopting AI tools.',
+      image: '/home.png'
+    },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-green-800 mb-3">
-            Conservation Solutions
+            Agriculture &amp; Conservation
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
           <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive geospatial intelligence and verified response services built to safeguard terrestrial and aquatic ecosystems.
+            Comprehensive services spanning precision agriculture with Eza Climavise and
+            environmental intelligence with Climavise.
           </p>
         </div>
 

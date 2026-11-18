@@ -90,8 +90,12 @@ export default function Hero({ scrollToSection }: HeroProps) {
         {/* Top Brand Tag */}
         <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gray-200 backdrop-blur-md mb-6 shadow-md">
           <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-          <span>EZA CLIMAVISE // Environmental Zone Analytics</span>
+          <span>Climavise &amp; Eza Climavise</span>
         </div>
+
+        <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-green-300/90">
+          Environmental Intelligence + Agriculture Intelligence
+        </p>
 
         {/* Dynamic Slide Content */}
         <div className="min-h-[200px] sm:min-h-[190px] flex flex-col items-center justify-center transition-all duration-500">
@@ -122,7 +126,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             onClick={() => scrollToSection('what-we-do')}
             className="inline-flex items-center justify-center rounded-xl bg-green-600 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-green-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-green-700 hover:shadow-green-600/50 sm:px-8 sm:py-4 sm:text-lg"
           >
-            Discover EZA CLIMAVISE
+            Discover Our Platforms
           </button>
           <button
             onClick={() => scrollToSection('support')}

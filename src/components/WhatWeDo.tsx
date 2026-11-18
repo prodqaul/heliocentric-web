@@ -106,162 +106,218 @@ export default function WhatWeDo() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-green-800 mb-3">
-            EZA CLIMAVISE Platform
+            Our Platforms
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             What We Do
           </h2>
           <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We bridge the gap between environmental intelligence and practical conservation action. 
-            <strong> EZA CLIMAVISE</strong> (Environmental Zone Analytics &amp; Climate Vision and Integrated Surveillance Engine) 
-            integrates satellite radar, artificial intelligence, IoT sensors, and drone verification into a unified workflow 
-            that empowers conservation authorities and communities to detect threats and take verified action.
+            We build AI-powered platforms that solve two of the world&apos;s most urgent challenges:
+            food insecurity and environmental degradation. Our solutions are designed to be
+            accessible, affordable, and impactful for farmers and conservation teams alike.
           </p>
         </div>
 
-        {/* 4-Phase Operational Workflow */}
-        <div className="mb-20">
-          <div className="text-center mb-10">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-              Our End-to-End Conservation Workflow
-            </h3>
-            <p className="text-sm md:text-base text-gray-500 mt-1">
-              From early warning to verified enforcement and long-term ecosystem recovery
+        {/* Dual Product Cards */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+          <div className="group bg-white rounded-2xl p-8 border border-green-100 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <div className="mb-6">
+              <h3 className="flex flex-col gap-1 leading-tight">
+                <span className="text-sm md:text-base font-semibold uppercase tracking-[0.18em] text-green-700">
+                  Eza Climavise
+                </span>
+                <span className="text-2xl font-extrabold text-gray-900">
+                  Agriculture Intelligence
+                </span>
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              An AI-powered crop diagnostics platform that identifies diseases, pests, and nutrient
+              deficiencies in as little as 1.8 seconds. Available via smartphone app, the SAROK
+              handheld device for non-smartphone users, and a Drone-as-a-Service solution for large
+              farms and cooperatives.
             </p>
+            <div className="flex justify-center">
+              <button className="inline-flex min-w-[190px] items-center justify-center rounded-lg bg-green-600 px-8 py-2.5 text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-green-700 hover:shadow-lg">
+                Review
+              </button>
+            </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {workflow.map((item, index) => (
-              <div
-                key={index}
-                className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+
+          <div className="group bg-white rounded-2xl p-8 border border-blue-100 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <div className="mb-6">
+              <h3 className="flex flex-col gap-1 leading-tight">
+                <span className="text-sm md:text-base font-semibold uppercase tracking-[0.18em] text-blue-700">
+                  Climavise
+                </span>
+                <span className="text-2xl font-extrabold text-gray-900">
+                  Environmental Intelligence
+                </span>
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              A near real-time environmental monitoring system combining satellite radar, smart
+              sensors, AI anomaly detection, and drone verification to detect illegal land-use
+              changes and deliver timely, verified alerts to decision-makers—even in the most
+              remote areas.
+            </p>
+            <div className="flex justify-center">
+              <a
+                href="#climavise-platform"
+                className="inline-flex min-w-[190px] items-center justify-center rounded-lg bg-blue-600 px-8 py-2.5 text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-blue-700 hover:shadow-lg"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl font-black text-green-600/30">{item.step}</span>
-                  <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-bold tracking-wider text-green-700">
-                    PHASE {item.step}
-                  </span>
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+                Explore Platform
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Integrated Core Capabilities with Images */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Integrated Technology Architecture
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto text-base">
-              EZA CLIMAVISE unifies space, aerial, and ground data streams into an actionable decision-support pipeline.
-            </p>
+        {/* Climavise Environmental Detail */}
+        <div id="climavise-platform" className="scroll-mt-24">
+          {/* 4-Phase Operational Workflow */}
+          <div className="mb-20">
+            <div className="text-center mb-10">
+              <span className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-blue-800 mb-3">
+                Climavise Platform
+              </span>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+                Our End-to-End Conservation Workflow
+              </h3>
+              <p className="text-sm md:text-base text-gray-500 mt-1">
+                From early warning to verified enforcement and long-term ecosystem recovery
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {workflow.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-3xl font-black text-green-600/30">{item.step}</span>
+                    <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-bold tracking-wider text-green-700">
+                      PHASE {item.step}
+                    </span>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {pillars.map((pillar, index) => (
-              <div
-                key={index}
-                className="group flex flex-col justify-between bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="relative h-44 w-full overflow-hidden">
-                  <Image
-                    src={pillar.image}
-                    alt={pillar.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <span className="absolute bottom-3 left-3 rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-0.5 text-xs font-medium text-gray-800 shadow-sm">
-                    {pillar.badge}
-                  </span>
-                </div>
+          {/* Integrated Core Capabilities with Images */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                Integrated Technology Architecture
+              </h3>
+              <p className="text-gray-600 max-w-2xl mx-auto text-base">
+                Climavise unifies space, aerial, and ground data streams into an actionable
+                decision-support pipeline.
+              </p>
+            </div>
 
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="h-9 w-9 rounded-lg bg-green-50 flex items-center justify-center ring-1 ring-green-200 text-green-700">
-                        {pillar.icon}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {pillars.map((pillar, index) => (
+                <div
+                  key={index}
+                  className="group flex flex-col justify-between bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="relative h-44 w-full overflow-hidden">
+                    <Image
+                      src={pillar.image}
+                      alt={pillar.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <span className="absolute bottom-3 left-3 rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-0.5 text-xs font-medium text-gray-800 shadow-sm">
+                      {pillar.badge}
+                    </span>
+                  </div>
+
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="h-9 w-9 rounded-lg bg-green-50 flex items-center justify-center ring-1 ring-green-200 text-green-700">
+                          {pillar.icon}
+                        </div>
+                        <h4 className="text-lg font-bold text-gray-900 leading-snug">
+                          {pillar.title}
+                        </h4>
                       </div>
-                      <h4 className="text-lg font-bold text-gray-900 leading-snug">
-                        {pillar.title}
-                      </h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {pillar.description}
+                      </p>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {pillar.description}
-                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Automatic Forest Loss Verification Feature Showcase */}
-        <div className="mb-20">
-          <div className="rounded-2xl border border-gray-800 bg-[#090d16] p-6 sm:p-8 md:p-10 text-white shadow-2xl overflow-hidden">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-              <div>
-                <span className="inline-block rounded-full bg-cyan-950 border border-cyan-800/60 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-2">
-                  Temporal Satellite AI
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                  Automatic Forest Loss Verification
-                </h3>
-                <p className="text-sm sm:text-base text-gray-400 mt-1">
-                  Comparing untouched baseline terrain with today&apos;s live satellite capture
-                </p>
-              </div>
-              {/* <div className="flex items-center gap-2 self-start md:self-auto rounded-lg bg-[#0f2338] border border-sky-800 px-3.5 py-2 text-xs font-bold text-sky-400">
-                <svg className="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span>Time Interval: 165 Days Apart</span>
-              </div> */}
-            </div>
-
-            <div className="relative w-full aspect-[2020/778] rounded-xl overflow-hidden border border-slate-800 shadow-inner">
-              <Image
-                src="/Futuristic%20Satellite%20Forest%20Monitoring%20changes.webp"
-                alt="Automatic Forest Loss Verification - Comparing untouched baseline terrain with today's live satellite capture"
-                fill
-                className="object-cover"
-                priority
-              />
+              ))}
             </div>
           </div>
-        </div>
 
-        {/* Value Proposition & Differentiators Callout */}
-        <div className="rounded-2xl bg-gradient-to-br from-green-900 to-emerald-950 p-8 sm:p-12 text-white shadow-xl">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block rounded-full bg-green-500/20 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-green-300 mb-3">
-              Recognized at GLOC 2026
-            </span>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-              Connecting Environmental Intelligence with Verified Action
-            </h3>
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
-              Endorsed by the International Astronautical Federation and selected for presentation at the Global Space Conference on Climate Change, EZA CLIMAVISE is designed for real operational enforcement across forests, wetlands, lakes, and marine ecosystems.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-              <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <div className="text-2xl font-bold text-green-400">24/7</div>
-                <div className="text-xs text-gray-300 mt-1">Optical + SAR Radar</div>
+          {/* Automatic Forest Loss Verification Feature Showcase */}
+          <div className="mb-20">
+            <div className="rounded-2xl border border-gray-800 bg-[#090d16] p-6 sm:p-8 md:p-10 text-white shadow-2xl overflow-hidden">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                <div>
+                  <span className="inline-block rounded-full bg-cyan-950 border border-cyan-800/60 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-2">
+                    Temporal Satellite AI
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+                    Automatic Forest Loss Verification
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-400 mt-1">
+                    Comparing untouched baseline terrain with today&apos;s live satellite capture
+                  </p>
+                </div>
               </div>
-              <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <div className="text-2xl font-bold text-green-400">Drone</div>
-                <div className="text-xs text-gray-300 mt-1">Visual Verification</div>
+
+              <div className="relative w-full aspect-[2020/778] rounded-xl overflow-hidden border border-slate-800 shadow-inner">
+                <Image
+                  src="/Futuristic%20Satellite%20Forest%20Monitoring%20changes.webp"
+                  alt="Automatic Forest Loss Verification - Comparing untouched baseline terrain with today's live satellite capture"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
-              <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <div className="text-2xl font-bold text-green-400">Multi-Eco</div>
-                <div className="text-xs text-gray-300 mt-1">Land, Water &amp; Wildlife</div>
-              </div>
-              <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <div className="text-2xl font-bold text-green-400">Nonprofit</div>
-                <div className="text-xs text-gray-300 mt-1">Mission-Reinvested</div>
+            </div>
+          </div>
+
+          {/* Value Proposition & Differentiators Callout */}
+          <div className="rounded-2xl bg-gradient-to-br from-green-900 to-emerald-950 p-8 sm:p-12 text-white shadow-xl">
+            <div className="max-w-3xl mx-auto text-center">
+              <span className="inline-block rounded-full bg-green-500/20 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-green-300 mb-3">
+                Recognized at GLOC 2026
+              </span>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+                Connecting Environmental Intelligence with Verified Action
+              </h3>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+                Endorsed by the International Astronautical Federation and selected for presentation
+                at the Global Space Conference on Climate Change, Climavise is designed for real
+                operational enforcement across forests, wetlands, lakes, and marine ecosystems.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div className="text-2xl font-bold text-green-400">24/7</div>
+                  <div className="text-xs text-gray-300 mt-1">Optical + SAR Radar</div>
+                </div>
+                <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div className="text-2xl font-bold text-green-400">Drone</div>
+                  <div className="text-xs text-gray-300 mt-1">Visual Verification</div>
+                </div>
+                <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div className="text-2xl font-bold text-green-400">Multi-Eco</div>
+                  <div className="text-xs text-gray-300 mt-1">Land, Water &amp; Wildlife</div>
+                </div>
+                <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div className="text-2xl font-bold text-green-400">Nonprofit</div>
+                  <div className="text-xs text-gray-300 mt-1">Mission-Reinvested</div>
+                </div>
               </div>
             </div>
           </div>
