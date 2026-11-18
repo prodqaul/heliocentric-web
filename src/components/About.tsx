@@ -16,7 +16,7 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Who We Are</h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Heliocentric System Group is a purpose-driven deep-tech company at the intersection of
+              Climavise tech is a purpose-driven deep-tech company at the intersection of
               precision agriculture and environmental sustainability. Through our platforms, we turn
               data into action—and action into lasting impact.
             </p>
